@@ -44,10 +44,13 @@ public:
 
     //member function
         
-    inline char get() const {
+    inline char get() const 
+    {
         access_ctr++;
         return content[cursor]; 
     }
+
+    inline pos size() const;
 
     inline char get(pos r, pos c) const;
     inline Screen &move(pos r, pos c);
@@ -142,6 +145,11 @@ Screen &Screen::set(pos r, pos c, char ch)
 }
 
 
+inline
+Screen::pos Screen::size() const 
+{
+    return height * width;
+}
 
 
 

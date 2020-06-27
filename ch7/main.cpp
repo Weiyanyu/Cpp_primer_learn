@@ -4,6 +4,10 @@
 
 using namespace std;
 
+void test(string str) {
+
+}
+
 int main() {
     
     Screen myScreen1(15, 5, 'X'), myScreen2(20, 5, 'Y');
@@ -15,4 +19,9 @@ int main() {
     
 
     return 0;
+
+    //test
+    const char *s = "hello";
+    test(s);
 }
+
