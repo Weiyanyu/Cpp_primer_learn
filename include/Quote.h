@@ -17,7 +17,9 @@ public:
     virtual ~Quote() = default;
 
     //for debug
-    virtual void debug() const;
+    virtual void debug() const {
+
+    };
 private:
     std::string bookNo;
 protected:
@@ -32,6 +34,7 @@ public:
         Quote(book, price), quantity(qty), discount(disc) {}
 
     double net_price(std::size_t) const = 0;
+
 protected:
     std::size_t quantity = 0;
     double discount = 0.0;

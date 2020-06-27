@@ -1,4 +1,8 @@
 #include "Quote.h"
+
+//----- class Quote -----
+
+
 // ----- class Bulk_quote -----
 
 double Bulk_quote::net_price(std::size_t cnt) const 
@@ -16,3 +20,5 @@ void Bulk_quote::debug() const
 {
     std::cout << this->quantity << this->discount;
 }
+
+
