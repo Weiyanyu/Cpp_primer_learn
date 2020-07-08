@@ -21,4 +21,3 @@ void Bulk_quote::debug() const
     std::cout << this->quantity << this->discount;
 }
 
-
