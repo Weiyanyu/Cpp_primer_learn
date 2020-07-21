@@ -13,7 +13,7 @@ int main() {
 }
 
 void testMpVector() {
-    MpVector nums;
+    MpVector<int> nums;
     assert(nums.size() == 0);
     assert(nums.capacity() == 0);
 
