@@ -60,6 +60,8 @@ private:
 
 };
 
+
+
 template <typename T>
 std::allocator<typename MpVector<T>::value_type> MpVector<T>::m_alloctor;
 

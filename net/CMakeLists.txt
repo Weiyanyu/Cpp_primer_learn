@@ -17,14 +17,18 @@ include_directories(include)
 #However, the file(GLOB...) allows for wildcard additions:
 file(GLOB SOURCES_CLIENT "src/*.cpp" "client.cpp")
 file(GLOB SOURCES_SERVER "src/*.cpp" "server.cpp")
+file(GLOB SOURCES_TEST "src/*.cpp" "test.cpp")
 
 
 
 add_executable(client ${SOURCES_CLIENT})
 add_executable(server ${SOURCES_SERVER})
+add_executable(main ${SOURCES_TEST})
+
 
 # pthread lib
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 target_link_libraries(client PUBLIC Threads::Threads)
 target_link_libraries(server PUBLIC Threads::Threads)
+target_link_libraries(main PUBLIC Threads::Threads)
